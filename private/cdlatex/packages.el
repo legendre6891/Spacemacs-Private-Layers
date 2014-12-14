@@ -29,8 +29,12 @@ which require an initialization must be listed explicitly in the list.")
                                     (yas-minor-mode -1)))
       (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
       (add-hook 'LaTeX-mode-hook 'smartparens-mode)
+      (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
+      (add-hook 'LaTeX-mode-hook '(lambda ()
+                                    (electric-indent-mode -1)))
       (setq reftex-plug-into-AuCTeX t)
-      (setq cdlatex-paired-parens "$[({")
+      (setq cdlatex-paired-parens "$[{(")
+
       (setq cdlatex-command-alist
             '(
               ("bi" "Insert \\binom{}{}" "\\binom{?}{}" cdlatex-position-cursor nil nil t)
