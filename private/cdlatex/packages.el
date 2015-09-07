@@ -57,6 +57,7 @@ which require an initialization must be listed explicitly in the list.")
               ("clm" "Insert claim env" "" cdlatex-environment ("claim") t nil)
               ("prop" "Insert proposition env" "" cdlatex-environment ("proposition") t nil)
               ("wts" "Insert want to show env" "" cdlatex-environment ("wts") t nil)
+              ("pr" "Insert proof env" "" cdlatex-environment ("proof") f nil)
               ("def" "Insert definition env" "" cdlatex-environment ("definition") t nil)
               ))
       
